@@ -3,7 +3,7 @@ import GlobalStyle from "../styles";
 import { SWRConfig } from "swr";
 import { fetcher, URL } from "../lib/utils";
 import useSWR from "swr";
-import { useContext, createContext } from "react";
+import { createContext } from "react";
 import React from "react";
 import Layout from "../components/Layout";
 

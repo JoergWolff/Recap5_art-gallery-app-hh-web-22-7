@@ -3,10 +3,10 @@ export default function Navigation() {
     <nav>
       <ul>
         <li>
-          <a href="./art-pieces">Artpieces</a>
+          <a href="../art-pieces">Artpieces</a>
         </li>
         <li>
-          <a href="./">Spotlight</a>
+          <a href="../">Spotlight</a>
         </li>
       </ul>
     </nav>
