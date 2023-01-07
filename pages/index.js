@@ -1,11 +1,10 @@
 import Spotlight from "../components/Spotlight";
 import { useContext } from "react";
 
-import { myDataContext } from "./_app";
+import { globalDataContext } from "./_app";
 
 export default function SpotlightPage() {
-  const globalData = useContext(myDataContext);
-  console.log(globalData);
+  const globalData = useContext(globalDataContext);
 
   return (
     <div>

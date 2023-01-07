@@ -1,12 +1,11 @@
 import Image from "next/image";
 import { useContext } from "react";
-import { myDataContext } from "../../pages/_app";
+import { globalDataContext } from "../../pages/_app";
 import { getRandon } from "../../lib/utils";
 
 export default function Spotlight() {
-  const globalData = useContext(myDataContext);
+  const globalData = useContext(globalDataContext);
   const randomPiece = globalData[getRandon(globalData.length)];
-  console.log(randomPiece);
   return (
     <div>
       <Image
@@ -16,7 +15,7 @@ export default function Spotlight() {
         height={300}
         priority
       />
-      <p>{randomPiece.artist}</p>
+      <p>Artist: {randomPiece.artist}</p>
     </div>
   );
 }

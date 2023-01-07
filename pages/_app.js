@@ -1,13 +1,12 @@
 // import { useImmerLocalStorageState } from "../lib/hooks";
 import GlobalStyle from "../styles";
-import { SWRConfig } from "swr";
 import { fetcher, URL } from "../lib/utils";
 import useSWR from "swr";
 import { createContext } from "react";
 import React from "react";
 import Layout from "../components/Layout";
 
-export const myDataContext = createContext();
+export const globalDataContext = createContext();
 
 export default function App({ Component, pageProps }) {
   const { data, error, isLoading } = useSWR(URL, fetcher);
@@ -22,11 +21,11 @@ export default function App({ Component, pageProps }) {
   return (
     <>
       {/* <SWRConfig value={{ fetcher }}> */}
-      <myDataContext.Provider value={data}>
+      <globalDataContext.Provider value={data}>
         <GlobalStyle />
         <Layout />
         <Component {...pageProps} />
-      </myDataContext.Provider>
+      </globalDataContext.Provider>
       {/* </SWRConfig> */}
     </>
   );

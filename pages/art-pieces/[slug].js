@@ -1,10 +1,10 @@
 import { useRouter } from "next/router";
 import { useContext } from "react";
-import { myDataContext } from "../_app";
+import { globalDataContext } from "../_app";
 import ArtPieceDetails from "../../components/ArtPieceDetails";
 
 export default function ArtPieceDetailsPage() {
-  const globalData = useContext(myDataContext);
+  const globalData = useContext(globalDataContext);
   const router = useRouter();
   const { slug } = router.query;
   const currentArtPiece = globalData.find((data) => data.slug === slug);

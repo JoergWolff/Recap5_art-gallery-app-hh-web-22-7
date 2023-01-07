@@ -1,11 +1,11 @@
 import { useRouter } from "next/router";
 import { useContext } from "react";
-import { myDataContext } from "../../pages/_app";
+import { globalDataContext } from "../../pages/_app";
 import ArtPiecePreview from "../ArtPiecePreview/index";
 
 export default function ArtPieces() {
   const router = useRouter();
-  const globalData = useContext(myDataContext);
+  const globalData = useContext(globalDataContext);
   function handleArtPieceClick(slug) {
     router.push(`../art-pieces/${slug}`);
   }
